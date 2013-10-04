@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="imageView" destination="Yu2-4h-6jm" id="RVq-LF-nkd"/>
                 <outlet property="leftButton" destination="6Te-a8-lsd" id="SmW-0j-1My"/>
+                <outlet property="movingButton" destination="bhe-tx-I3J" id="lt9-ck-AtX"/>
                 <outlet property="rightButton" destination="N8b-EI-SKv" id="yn3-aW-cXZ"/>
                 <outlet property="slider" destination="MEJ-eg-qfw" id="Unw-nu-V2k"/>
                 <outlet property="view" destination="1" id="3"/>
@@ -37,6 +38,14 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="N8b-EI-SKv">
                     <rect key="frame" x="248" y="518" width="52" height="33"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bhe-tx-I3J">
+                    <rect key="frame" x="23" y="477" width="52" height="33"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="Button">

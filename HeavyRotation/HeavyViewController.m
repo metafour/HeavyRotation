@@ -16,6 +16,18 @@
 
 @synthesize imageView, slider, leftButton, rightButton;
 
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    CGRect bounds = [[self view] bounds];
+    
+    if (UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) {
+        <#statements#>
+    }
+    
+    
+    
+}
+
 - (void)viewDidLoad
 {
     [imageView setAutoresizingMask:UIViewAutoresizingFlexibleWidth];

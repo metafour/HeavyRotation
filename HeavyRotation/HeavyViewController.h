@@ -12,7 +12,8 @@
 
 @property (nonatomic) IBOutlet UIImageView *imageView;
 @property (nonatomic, weak) IBOutlet UISlider *slider;
-@property (nonatomic, weak) IBOutlet UIButton *leftButton;
-@property (nonatomic, weak) IBOutlet UIButton *rightButton;
+@property (nonatomic) IBOutlet UIButton *leftButton;
+@property (nonatomic) IBOutlet UIButton *rightButton;
+@property (nonatomic) IBOutlet UIButton *movingButton;
 
 @end
