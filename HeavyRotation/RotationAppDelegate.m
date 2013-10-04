@@ -11,21 +11,28 @@
 
 @implementation RotationAppDelegate
 
+@synthesize vc;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    HeavyViewController *vc = [[HeavyViewController alloc] init];
+    vc = [[HeavyViewController alloc] init];
     [[self window] setRootViewController:vc];
     
     UIDevice *device = [UIDevice currentDevice];
     
     [device beginGeneratingDeviceOrientationNotifications];
+    [device setProximityMonitoringEnabled:YES];
     
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     
     [nc addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:device];
+    
+    if ([device isProximityMonitoringEnabled]) {
+        [nc addObserver:self selector:@selector(proximityChanged:) name:UIDeviceProximityStateDidChangeNotification object:device];
+    }
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -62,6 +69,16 @@
 - (void)orientationChanged:(NSNotification *)note
 {
     NSLog(@"orientationChanged: %d", [[note object] orientation]);
+}
+
+- (void)proximityChanged:(NSNotification *)note
+{
+    if ([[vc view] backgroundColor] == [UIColor darkGrayColor]) {
+        [[vc view] setBackgroundColor:[UIColor whiteColor]];
+    } else
+    {
+        [[vc view] setBackgroundColor:[UIColor darkGrayColor]];
+    }
 }
 
 @end

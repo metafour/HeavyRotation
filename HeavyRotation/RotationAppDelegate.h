@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HeavyViewController.h"
 
 @interface RotationAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic) HeavyViewController *vc;
 
 @end
