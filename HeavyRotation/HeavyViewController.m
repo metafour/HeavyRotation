@@ -14,6 +14,19 @@
 
 @implementation HeavyViewController
 
+@synthesize imageView, slider, leftButton, rightButton;
+
+- (void)viewDidLoad
+{
+    [imageView setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+    
+    [slider setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin];
+    
+    [leftButton setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin];
+    
+    [rightButton setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin];
+}
+
 - (NSUInteger)supportedInterfaceOrientations
 {
 //    return UIInterfaceOrientationMaskAllButUpsideDown;

@@ -10,4 +10,9 @@
 
 @interface HeavyViewController : UIViewController
 
+@property (nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic, weak) IBOutlet UISlider *slider;
+@property (nonatomic, weak) IBOutlet UIButton *leftButton;
+@property (nonatomic, weak) IBOutlet UIButton *rightButton;
+
 @end

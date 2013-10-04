@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeavyViewController">
             <connections>
+                <outlet property="imageView" destination="Yu2-4h-6jm" id="RVq-LF-nkd"/>
+                <outlet property="leftButton" destination="6Te-a8-lsd" id="SmW-0j-1My"/>
+                <outlet property="rightButton" destination="N8b-EI-SKv" id="yn3-aW-cXZ"/>
+                <outlet property="slider" destination="MEJ-eg-qfw" id="Unw-nu-V2k"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -14,19 +18,16 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MEJ-eg-qfw">
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="MEJ-eg-qfw">
                     <rect key="frame" x="18" y="20" width="284" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </slider>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GDT_cover_digital.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Yu2-4h-6jm">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GDT_cover_digital.jpg" id="Yu2-4h-6jm">
                     <rect key="frame" x="57" y="61" width="206" height="206"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="206" id="uJS-8G-d2V"/>
-                    </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Te-a8-lsd">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6Te-a8-lsd">
                     <rect key="frame" x="23" y="518" width="52" height="33"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -34,7 +35,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8b-EI-SKv">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="N8b-EI-SKv">
                     <rect key="frame" x="248" y="518" width="52" height="33"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -44,17 +45,6 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstItem="6Te-a8-lsd" firstAttribute="baseline" secondItem="N8b-EI-SKv" secondAttribute="baseline" id="0th-q9-I5M"/>
-                <constraint firstItem="Yu2-4h-6jm" firstAttribute="top" secondItem="1" secondAttribute="top" constant="61" id="2yS-zW-Rhj"/>
-                <constraint firstItem="Yu2-4h-6jm" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="4uD-2H-znd"/>
-                <constraint firstItem="Yu2-4h-6jm" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="57" id="H63-LX-gJC"/>
-                <constraint firstItem="Yu2-4h-6jm" firstAttribute="top" secondItem="MEJ-eg-qfw" secondAttribute="bottom" constant="8" symbolic="YES" id="Zbh-Hr-pRh"/>
-                <constraint firstItem="N8b-EI-SKv" firstAttribute="trailing" secondItem="MEJ-eg-qfw" secondAttribute="trailing" id="d7y-x5-TPU"/>
-                <constraint firstAttribute="trailing" secondItem="N8b-EI-SKv" secondAttribute="trailing" constant="20" symbolic="YES" id="eXI-Vl-ym9"/>
-                <constraint firstAttribute="bottom" secondItem="6Te-a8-lsd" secondAttribute="bottom" constant="17" id="id9-JP-jO7"/>
-                <constraint firstItem="Yu2-4h-6jm" firstAttribute="centerX" secondItem="MEJ-eg-qfw" secondAttribute="centerX" id="uIi-gN-hdr"/>
-            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
