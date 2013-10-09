@@ -14,17 +14,22 @@
 
 @implementation HeavyViewController
 
-@synthesize imageView, slider, leftButton, rightButton;
+@synthesize imageView, slider, leftButton, rightButton, movingButton;
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     CGRect bounds = [[self view] bounds];
     
+//    [movingButton center].x;
+    
     if (UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) {
-        <#statements#>
+        [movingButton setCenter:CGPointMake(49, bounds.size.height - 75)];
+//        bounds.size.height
+//        bounds.size.width
+    } else // toInterfaceOrientation == Landscape
+    {
+        [movingButton setCenter:CGPointMake(bounds.size.width - 46, (bounds.size.height / 2) + 14 )];
     }
-    
-    
     
 }
 
